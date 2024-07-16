@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       {/* <Header/> */}
-      <BrowserRouter>
+  
       <Routes>
         <Route path='/' element = {<DefaultLayout><Home/></DefaultLayout>}/>
         <Route path='/Appointment' element = {<DefaultLayout><Appointment/></DefaultLayout>}/>
@@ -32,7 +32,7 @@ function App() {
         <Route path='/PatientDashBoard' element = {<PatientDashBoard/>}/>
       </Routes> 
       <ToastContainer position='top-center'/>
-      </BrowserRouter>
+  
     </>
   )
 }

@@ -9,7 +9,7 @@ const PatientDashBoard = () => {
   return (
     <div>
       PatientDashboard
-      <button type="submit" className='w-[100px] h-[50px] bg-black text-white' onClick={handleAppointment}>Book An Appointment</button>
+      <button type="submit" className='w-[200px] h-[50px] bg-black text-white rounded-md' onClick={handleAppointment}>Book An Appointment</button>
     </div>
   )
 }
