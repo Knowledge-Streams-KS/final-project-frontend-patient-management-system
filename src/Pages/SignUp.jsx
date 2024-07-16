@@ -10,7 +10,7 @@ const initialValues = {
   email: '',
   password: '',
   confirmPassword: '',
-  role: ''
+  role : '',
 };
 
 const SignUp = () => {
@@ -29,6 +29,7 @@ const SignUp = () => {
         } else if (values.role === 'doctor') {
           navigate('/Doctors');
         }
+        alert("Registration successful!");
       } catch (error) {
         console.error('Error submitting form:', error);
         toast.error('Error submitting form. Please try again.');

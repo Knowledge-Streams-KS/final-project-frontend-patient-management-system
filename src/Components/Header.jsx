@@ -11,8 +11,8 @@ const Header = () => {
             <li><NavLink to="/Appointment">Appointment</NavLink></li>
             {/* <li><NavLink to="/Departments">Departments</NavLink></li> */}
             <li><NavLink to="/Doctors">Doctors</NavLink></li>
-            {/* <li><NavLink to="/FAQ">FAQ</NavLink></li> */}
-            <li><NavLink to="/SignUp">SignUp</NavLink></li>
+            <li><NavLink to="/FAQ">FAQ</NavLink></li>
+            <li><NavLink to="/SignUp">SignUp As Patient</NavLink></li>
         </ul>
     </nav>
    </header>
