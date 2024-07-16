@@ -1,9 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const SignOutPatient = () => {
-  return (
-    <h1></h1>
-  )
+    const navigate = useNavigate();
+    navigate('/')
+//   return (
+  
+//   )
 }
 
 export default SignOutPatient

@@ -22,12 +22,12 @@ const SignUp = () => {
       try {
         const response = await AxiosInstance.post("/UserAuth/SignUp", values, {});
         console.log(response);
-        toast.success(response.data.success); // Ensure this matches the backend response
+        toast.success(response.data.message); // Ensure this matches the backend response
         //navigating to particulalar page
         if (values.role === 'patient') {
           navigate('/PatientDashBoard');
         } else if (values.role === 'doctor') {
-          navigate('/Doctors');
+          navigate('/DoctorDashBoard');
         }
         alert("Registration successful!");
       } catch (error) {

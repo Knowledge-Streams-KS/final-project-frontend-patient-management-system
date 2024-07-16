@@ -13,7 +13,7 @@ const initialValues = {
   role : '',
 };
 
-const SignUp = () => {
+const SignUpDoctor = () => {
   const navigate = useNavigate();
   const { values, handleChange, handleSubmit } = useFormik({
     initialValues: initialValues,
@@ -68,4 +68,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpDoctor;

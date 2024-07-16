@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Doctors = () => {
+const DoctorDashBoard = () => {
   return (
     <>
     <h1 className='text-2xl p-9 m-5'>Bello</h1>
@@ -12,4 +12,4 @@ const Doctors = () => {
   )
 }
 
-export default Doctors
+export default DoctorDashBoard

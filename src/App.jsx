@@ -15,6 +15,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import SignUp from './Pages/SignUp'
 import PatientDashBoard from './Pages/PatientDashBoard'
 import PatientLayout from './Layouts/PatientLayout'
+import SignUpDoctor from './Pages/SignUpDoctor'
+import DoctorLayout from './Layouts/DoctorLayout'
+import DoctorDashBoard from './Pages/DoctorDashBoard'
 
 function App() {
 
@@ -31,6 +34,9 @@ function App() {
         <Route path='/Departments' element = {<DefaultLayout><Departments/></DefaultLayout>}/>
         <Route path='/SignUp' element = {<SignUp/>} />
         <Route path='/PatientDashBoard' element = {<PatientLayout><PatientDashBoard/></PatientLayout>}/>
+        <Route path='/SignUpDoctor' element = {<SignUpDoctor/>} />
+        <Route path='/DoctorDashBoard' element = {<DoctorLayout><DoctorDashBoard/></DoctorLayout>}/>
+
       </Routes> 
       <ToastContainer position='top-center'/>
   
