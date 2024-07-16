@@ -18,22 +18,31 @@ const SignUp = () => {
   const { values, handleChange, handleSubmit } = useFormik({
     initialValues: initialValues,
     onSubmit: async (values) => {
-      console.log("Form is submitted ", values);
+      console.log("Form is submitted ", values,
+        
+      );
+      if (values.password !== values.confirmPassword) {
+        toast.error('Password does not match!');
+        return;
+      }
+      
       try {
         const response = await AxiosInstance.post("/UserAuth/SignUp", values, {});
         console.log(response);
-        toast.success(response.data.success); // Ensure this matches the backend response
+       
+        toast.success(response.data.message); // Ensure this matches the backend response
         //navigating to particulalar page
-        if (values.role === 'patient') {
+        
+       if (values.role === 'patient') {
           navigate('/PatientDashBoard');
-        } else if (values.role === 'doctor') {
-          navigate('/Doctors');
         }
-        alert("Registration successful!");
+       
       } catch (error) {
         console.error('Error submitting form:', error);
-        toast.error('Error submitting form. Please try again.');
-      }
+       toast.error('Error submitting form. Please try again.');
+      
+    }
+      
     }
   });
 
@@ -58,8 +67,10 @@ const SignUp = () => {
           onChange={handleChange} placeholder='Re-type your password' className='h-[40px] w-[400px] mb-10
           text-center' />
           <br />
-          <input type="text" name="role" value={values.role} onChange={handleChange}
-           placeholder='Enter your role' className='h-[40px] w-[400px] mb-10 text-center' />
+          <select name="role"  onChange={handleChange} className='h-[40px] w-[400px] mb-10 text-center'>
+          <option value="" disabled>Select your role</option>
+          <option value={values.role}>Patient</option>
+          </select>
           <br />
           <button type="submit" className='bg-black text-white w-28 rounded-sm h-[40px]'>SignUp</button>
         </form>
