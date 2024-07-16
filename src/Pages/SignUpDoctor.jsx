@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AxiosInstance from '../axios/axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +14,7 @@ const initialValues = {
 };
 
 const SignUpDoctor = () => {
+    const [isSubmitted, setIsSubmitted] = useState(false);
   const navigate = useNavigate();
   const { values, handleChange, handleSubmit } = useFormik({
     initialValues: initialValues,
@@ -29,13 +30,13 @@ const SignUpDoctor = () => {
       try {
         const response = await AxiosInstance.post("/UserAuth/SignUp", values, {});
         console.log(response);
-       
+        setIsSubmitted(true)
         toast.success(response.data.message); // Ensure this matches the backend response
         //navigating to particulalar page
         
-       if (values.role === 'doctor') {
-          navigate('/DoctorDashBoard');
-        }
+    //    if (values.role === 'doctor') {
+    //       navigate('/DoctorDashBoard');
+    //     }
        
       } catch (error) {
         console.error('Error submitting form:', error);
@@ -45,6 +46,14 @@ const SignUpDoctor = () => {
       
     }
   });
+  useEffect(()=> {
+    if (isSubmitted) {
+        setTimeout(() => {
+          navigate('/DoctorDashBoard'); // Navigate to PatientDashboard page after a delay
+          toast.dismiss(); // Dismiss the toast message
+        }, 3000); // Delay of 3 seconds
+      }
+  },[isSubmitted])
 
   return (
     <div className="min-h-[600px] min-w-[500px] flex justify-center items-center mt-10">

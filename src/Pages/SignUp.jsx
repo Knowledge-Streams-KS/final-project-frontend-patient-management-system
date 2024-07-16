@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AxiosInstance from '../axios/axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +14,7 @@ const initialValues = {
 };
 
 const SignUp = () => {
+  const [isSubmitted , setIsSubmitted] = useState(false);
   const navigate = useNavigate();
   const { values, handleChange, handleSubmit } = useFormik({
     initialValues: initialValues,
@@ -29,13 +30,15 @@ const SignUp = () => {
       try {
         const response = await AxiosInstance.post("/UserAuth/SignUp", values, {});
         console.log(response);
-       
+       //setting is submitting true so can do navigation easily 
+        setIsSubmitted(true);
         toast.success(response.data.message); // Ensure this matches the backend response
         //navigating to particulalar page
         
-       if (values.role === 'patient') {
-          navigate('/PatientDashBoard');
-        }
+      //  if (values.role === 'patient') {
+      //     // navigate('/PatientDashBoard');
+      //   }
+      
        
       } catch (error) {
         console.error('Error submitting form:', error);
@@ -45,6 +48,15 @@ const SignUp = () => {
       
     }
   });
+ //useEffect -> to record that change 
+ useEffect(() => {
+  if (isSubmitted) {
+    setTimeout(() => {
+      navigate('/PatientDashBoard'); // Navigate to PatientDashboard page after a delay
+      toast.dismiss(); // Dismiss the toast message
+    }, 3000); // Delay of 3 seconds
+  }
+}, [isSubmitted]);
 
   return (
     <div className="min-h-[600px] min-w-[500px] flex justify-center items-center mt-10">
