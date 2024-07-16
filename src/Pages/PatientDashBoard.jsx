@@ -8,7 +8,8 @@ const PatientDashBoard = () => {
     }
   return (
     <div>
-      PatientDashboard
+      <h1>Welcome</h1>
+      <h2>Kindly Fill the Bio</h2>
       <button type="submit" className='w-[200px] h-[50px] bg-black text-white rounded-md' onClick={handleAppointment}>Book An Appointment</button>
     </div>
   )
