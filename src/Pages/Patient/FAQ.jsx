@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AxiosInstance from '../axios/axios';
+import AxiosInstance from '../../axios/axios';
 
 const initialValues = {
   firstName: '',

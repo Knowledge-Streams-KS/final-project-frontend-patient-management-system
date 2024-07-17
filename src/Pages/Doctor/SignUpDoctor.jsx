@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
 import React, { useEffect, useState } from 'react';
-import AxiosInstance from '../axios/axios';
+import AxiosInstance from '../../axios/axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
@@ -76,10 +76,10 @@ const SignUpDoctor = () => {
           onChange={handleChange} placeholder='Re-type your password' className='h-[40px] w-[400px] mb-10
           text-center' />
           <br />
-          <select name="role"  onChange={handleChange} className='h-[40px] w-[400px] mb-10 text-center'>
+          {/* <select name="role"  onChange={handleChange} className='h-[40px] w-[400px] mb-10 text-center'>
           <option value="" disabled>Select your role</option>
           <option value={values.role}>Doctor</option>
-          </select>
+          </select> */}
           <br />
           <button type="submit" className='bg-black text-white w-28 rounded-sm h-[40px]'>SignUp</button>
         </form>
