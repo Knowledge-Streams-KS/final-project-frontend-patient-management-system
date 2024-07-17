@@ -1,10 +1,11 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import heart from "../assets/Images/heart.jpg"
+
 const Departments = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -23,17 +24,49 @@ const Departments = () => {
   };
   return (
     <>
-    <h1 className='text-2xl p-9 m-5'>Jello</h1>
-    <Carousel responsive={responsive}>
-  <div>Item 1</div>
-  <div>Item 2</div>
-  <div>Item 3</div>
-  <div>Item 4</div>
-</Carousel>;
-    <p>
+    <div className='mt-[-350px]'>
+    <h1 className='text-3xl p-9 m-5 font-bold'>Our Services</h1>
+    <p className='mb-[10px]'>
         
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem reprehenderit temporibus ipsum expedita, asperiores laudantium sint eligendi, eveniet nihil ea blanditiis numquam quibusdam laboriosam quos quas voluptate? Omnis, distinctio corrupti.
     </p>
+    <br />
+    <Carousel responsive={responsive} gap={30}>
+      <div className='space-x-4'>
+        <div className='relative  "'>
+          <img src={heart} alt="" className='min-h-10' />
+          <div className='absolute top-[300px] left-4 p-4 text-white bg-black w-[380px] rounded-[100px] '>
+          <h2 className='text-2xl' >Cardiology</h2>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className='relative'>
+          <img src={heart} alt="" className='min-h-10' />
+          <div className='absolute top-[300px] left-4 p-4 text-white bg-black w-[380px] rounded-[100px]'>
+          <h2 className='text-2xl' >Cardiology</h2>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className='relative"'>
+          <img src={heart} alt="" className='min-h-10' />
+          <div className='absolute top-[300px] left-4 p-4 text-white bg-black w-[380px] rounded-[100px]'>
+          <h2 className='text-2xl' >Cardiology</h2>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className='relative'>
+          <img src={heart} alt="" className='min-h-10' />
+          <div className='absolute top-[300px] left-4 p-4 text-white bg-black w-[380px] rounded-[100px]'>
+            <h2 className='text-2xl' >Cardiology</h2>
+          </div>
+        </div>
+      </div>
+    </Carousel>
+    </div>
+  
 
    </>
   )

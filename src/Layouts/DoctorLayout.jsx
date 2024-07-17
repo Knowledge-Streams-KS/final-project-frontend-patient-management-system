@@ -1,6 +1,6 @@
 import React from 'react'
 import DoctorHeader from '../Components/DoctorHeader'
-
+import Footer from "../Components/Footer"
 
 
 const DoctorLayout = (props) => {
@@ -8,7 +8,7 @@ const DoctorLayout = (props) => {
     <div>
     <DoctorHeader/>
     {props.children}
-    {/* <Footer /> */}
+    <Footer />
     </div>
   )
 }

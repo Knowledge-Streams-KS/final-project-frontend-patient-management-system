@@ -51,7 +51,7 @@ const SignUpDoctor = () => {
         setTimeout(() => {
           navigate('/DoctorDashBoard'); // Navigate to PatientDashboard page after a delay
           toast.dismiss(); // Dismiss the toast message
-        }, 3000); // Delay of 3 seconds
+        }, 2000); // Delay of 2 seconds
       }
   },[isSubmitted])
 

@@ -4,7 +4,7 @@ const DoctorHeader = () => {
   return (
  
        <header className='flex justify-between bg-black text-white top-0 w-full left-0 fixed  z-50 p-4'>
-        <a href="">Hi</a>
+           <h1 className='text-2xl'>Patient Mangement System</h1>
         <nav className='flex justify-end'>
             <ul className='flex space-x-7 p-3  '>
                 {/* <li><NavLink to= "/">Home</NavLink></li> */}

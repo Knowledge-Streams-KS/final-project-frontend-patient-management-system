@@ -18,6 +18,7 @@ import PatientLayout from './Layouts/PatientLayout'
 import SignUpDoctor from './Pages/Doctor/SignUpDoctor'
 import DoctorLayout from './Layouts/DoctorLayout'
 import DoctorDashBoard from './Pages/Doctor/DoctorDashBoard'
+import MedicalRecord from './Pages/Patient/MedicalRecord'
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
         <Route path='/PatientDashBoard' element = {<PatientLayout><PatientDashBoard/></PatientLayout>}/>
         <Route path='/SignUpDoctor' element = {<SignUpDoctor/>} />
         <Route path='/DoctorDashBoard' element = {<DoctorLayout><DoctorDashBoard/></DoctorLayout>}/>
+        <Route path='/MedicalRecord' element = {<PatientLayout><MedicalRecord/></PatientLayout>} />
 
       </Routes> 
       <ToastContainer position='top-center'/>
