@@ -4,7 +4,7 @@ import lottie from "lottie-react"
 import logo from "../assets/mainLogo.json"
 import Biography from "../Components/Biography"
 import faq from "../assets/faq.json"
-import FAQ from "./FAQ"
+import FAQ from "./Patient/FAQ"
 const Home = () => {
 return (
     <>

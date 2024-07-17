@@ -4,20 +4,20 @@ import Header from './Components/Header'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import DefaultLayout from './Layouts/DefaultLayout'
-import Appointment from './Pages/Appointment'
-import Doctors from './Pages/DoctorDashBoard'
-import FAQ from './Pages/FAQ'
+import Appointment from './Pages/Patient/Appointment'
+import Doctors from './Pages/Doctor/DoctorDashBoard'
+import FAQ from './Pages/Patient/FAQ'
 import Departments from './Pages/Departments'
 //toastify -> displaying alerts 
 //import { ToastContainer, toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import SignUp from './Pages/SignUp'
-import PatientDashBoard from './Pages/PatientDashBoard'
+import SignUp from './Pages/Patient/SignUp'
+import PatientDashBoard from './Pages/Patient/PatientDashBoard'
 import PatientLayout from './Layouts/PatientLayout'
-import SignUpDoctor from './Pages/SignUpDoctor'
+import SignUpDoctor from './Pages/Doctor/SignUpDoctor'
 import DoctorLayout from './Layouts/DoctorLayout'
-import DoctorDashBoard from './Pages/DoctorDashBoard'
+import DoctorDashBoard from './Pages/Doctor/DoctorDashBoard'
 
 function App() {
 
