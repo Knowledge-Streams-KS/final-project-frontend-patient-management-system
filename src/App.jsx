@@ -19,6 +19,9 @@ import SignUpDoctor from './Pages/Doctor/SignUpDoctor'
 import DoctorLayout from './Layouts/DoctorLayout'
 import DoctorDashBoard from './Pages/Doctor/DoctorDashBoard'
 import MedicalRecord from './Pages/Patient/MedicalRecord'
+import PatientLogin from './Pages/Patient/PatientLogin'
+import SignOutPatient from './Pages/Patient/SignOutPatient'
+
 
 function App() {
 
@@ -30,14 +33,18 @@ function App() {
       <Routes>
         <Route path='/' element = {<DefaultLayout><Home/></DefaultLayout>}/>
         <Route path='/Appointment' element = {<PatientLayout><Appointment/></PatientLayout>}/>
+        
         <Route path='/Doctors' element = {<DefaultLayout><Doctors/></DefaultLayout>}/>
         <Route path='/FAQ' element = {<PatientLayout><FAQ/></PatientLayout>}/>
         <Route path='/Departments' element = {<DefaultLayout><Departments/></DefaultLayout>}/>
         <Route path='/SignUp' element = {<SignUp/>} />
+        <Route path='/SignOutPatient' element = {<SignOutPatient/>} />
+        <Route path='/PatientLogin' element = {<PatientLogin/>}/>
         <Route path='/PatientDashBoard' element = {<PatientLayout><PatientDashBoard/></PatientLayout>}/>
         <Route path='/SignUpDoctor' element = {<SignUpDoctor/>} />
         <Route path='/DoctorDashBoard' element = {<DoctorLayout><DoctorDashBoard/></DoctorLayout>}/>
         <Route path='/MedicalRecord' element = {<PatientLayout><MedicalRecord/></PatientLayout>} />
+        
 
       </Routes> 
       <ToastContainer position='top-center'/>
